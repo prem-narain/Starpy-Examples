@@ -43,7 +43,7 @@ class Callflow(object):
 		self.current=Answer()
 		return self.current(self.agi).addBoth(self.whatNext)
 	def whatNext(self, reason):
-		print "Successfully Answerd"
+		print "Successfully Answered"
 		self.current=Hangup()
 		return self.current(self.agi).addBoth(self.CallClearing)
 	def CallClearing(self,reason):
