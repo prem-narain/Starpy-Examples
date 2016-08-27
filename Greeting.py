@@ -45,5 +45,6 @@ if __name__ == "__main__":
 	logging.basicConfig()
 	fastagi.log.setLevel(logging.DEBUG )
 	f = fastagi.FastAGIFactory(Greetingflow)
+	print ("Listening!")
 	reactor.listenTCP(4573, f, 50, '127.0.0.1') # only binding on local interface
 	reactor.run()
